@@ -97,7 +97,7 @@ namespace TheKoans
 
 			int x = nullableInt ?? 42;
 
-			Assert.AreEqual (FILL_ME_IN, x, "Figuring this out is like trying to figure out the meaning of life...");
+			Assert.AreEqual (42, x, "Figuring this out is like trying to figure out the meaning of life...");
 		}
 
 		[Test]
@@ -162,7 +162,7 @@ namespace TheKoans
 				result = result * i;
 				i += 1;
 			}
-			Assert.AreEqual (FILL_ME_IN, result, "Awww - Break out! Le Break: c'est chic!");
+			Assert.AreEqual (120, result, "Awww - Break out! Le Break: c'est chic!");
 		}
 
 		[Test]
@@ -177,7 +177,7 @@ namespace TheKoans
 				}
 				result += i;
 			}
-			Assert.AreEqual (FILL_ME_IN, result, "Don't let the math scare your Karma away.. Persevere!");
+			Assert.AreEqual (25, result, "Don't let the math scare your Karma away.. Persevere!");
 		}
 
 		[Test]
@@ -235,7 +235,7 @@ namespace TheKoans
 				whoCaughtTheException = "When we tried to move to the next item in the list";
 			}
 
-			Assert.AreEqual (FILL_ME_IN, whoCaughtTheException, "If you can solve this whodunit mystery, your Karma will thank you.");
+			Assert.AreEqual ("When we tried to move to the next item in the list", whoCaughtTheException, "If you can solve this whodunit mystery, your Karma will thank you.");
 		}
 	}
 }

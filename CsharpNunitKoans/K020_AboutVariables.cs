@@ -50,8 +50,8 @@ namespace TheKoans
 			//And by "explicit", we mean that you cannot use this
 			// (Try uncommenting the line below to see how the compiler reacts)
 			//var oneName = "John", anotherName = "Smith";
-			Assert.AreEqual (FILL_ME_IN, firstName, "Explicit type assignment should not impact the value.");
-			Assert.AreEqual (FILL_ME_IN, lastName, "Implicit type assignment should also not impact the value (although lastName was explicitly set).");
+			Assert.AreEqual ("John", firstName, "Explicit type assignment should not impact the value.");
+			Assert.AreEqual ("Smith", lastName, "Implicit type assignment should also not impact the value (although lastName was explicitly set).");
 		}
 
 		[Test]
@@ -59,7 +59,7 @@ namespace TheKoans
 		{
 			long someNumber = 92286;
 			var myNum = someNumber;
-			Assert.AreEqual (typeof(FILL_ME_IN), myNum.GetType (), "The apple does not fall far from the tree.  Neither does the type of the long variable you pulled the value from.");
+			Assert.AreEqual (typeof(long), myNum.GetType(), "The apple does not fall far from the tree.  Neither does the type of the long variable you pulled the value from.");
 
 			// So this should fail, because types cannot implicitly convert to certain others
 			// (Again, uncomment the line below to view the compiler error message)
@@ -75,7 +75,7 @@ namespace TheKoans
 			long aLongNumber = 92286L;
 			var myTotal = anInteger * aLongNumber;
 
-			Assert.AreEqual (typeof(FILL_ME_IN), myTotal.GetType (), "An int and a long walk into a bar... And their baby is a...");
+			Assert.AreEqual (typeof(long), myTotal.GetType (), "An int and a long walk into a bar... And their baby is a...");
 		}
 
 		[Test]
@@ -132,8 +132,8 @@ namespace TheKoans
 			var firstTest = implicitInt + oneSpecialInt;
 			var secondTest = anotherSpecialInt + implicitInt;
 
-			Assert.AreEqual (typeof(FILL_ME_IN), firstTest.GetType (), "An int and a user-defined type that can return an int walk into a bar... And their baby is a...");
-			Assert.AreEqual (typeof(FILL_ME_IN), secondTest.GetType (), "This will show you the type is not based on the order of expression's operands, but their result.");
+			Assert.AreEqual (typeof(int), firstTest.GetType (), "An int and a user-defined type that can return an int walk into a bar... And their baby is a...");
+			Assert.AreEqual (typeof(int), secondTest.GetType (), "This will show you the type is not based on the order of expression's operands, but their result.");
 		}
 	}
 }
