@@ -17,7 +17,7 @@ namespace TheKoans
 			//Even though we don't specify types explicitly, the compiler
 			//will pick one for us when we choose the var keyword
 			var name = "John";
-			Assert.AreEqual (typeof(FILL_ME_IN), name.GetType (), "Identify the data type of the value John to proceed on your Karma quest.");
+			Assert.AreEqual (typeof(string), name.GetType (), "Identify the data type of the value John to proceed on your Karma quest.");
 
 			//but only if it can. So this doesn't work
 			// (Try uncommenting the line below to see how the compiler reacts)
@@ -34,7 +34,7 @@ namespace TheKoans
 			//Even though we don't specify types explicitly, the compiler
 			//will pick one for us
 			var names = new[] { "John", "Smith" };
-			Assert.AreEqual (typeof(FILL_ME_IN), names.GetType (), "Determine the type of the array elements to improve your Karma.");
+			Assert.AreEqual (typeof(string[]), names.GetType (), "Determine the type of the array elements to improve your Karma.");
 
 			//but only if it can. So this doesn't work
 			// (Try uncommenting the line below to see how the compiler reacts)
@@ -90,10 +90,10 @@ namespace TheKoans
 			//int cannotDoThis = aLongNumber;
 
 			// But you can "cast" to ensure that the conversion is done as you explicitly expect.
-			var canDoThis = (short)aLongNumber;
+			var canDoThis = (float)aLongNumber;
 
-			Assert.AreEqual (typeof(FILL_ME_IN), canDoThis.GetType (), "Do not be short on patience. Your path to enlightenment is a process, not a destination.");
-			Assert.AreEqual (FILL_ME_IN, canDoThis, "Notice how the information is changed/lost in the conversion. This is why the compiler cannot implicitly do it.");
+			Assert.AreEqual (typeof(float), canDoThis.GetType (), "Do not be short on patience. Your path to enlightenment is a process, not a destination.");
+			Assert.AreEqual (aLongNumber, canDoThis, "Notice how the information is changed/lost in the conversion. This is why the compiler cannot implicitly do it.");
 		}
 		// You can also declare a user-defined type to enable implicit conversion
 		// Don't worry if you don't understand the class definition (look for AboutClasses)
